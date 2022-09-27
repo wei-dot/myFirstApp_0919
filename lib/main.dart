@@ -1,7 +1,40 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  var appTitle = const Text('我的第一個flutter App'),
+      hiFlutter = const Text(
+        'Hi,Flutter.\n今天是20220926',
+        style: TextStyle(fontSize: 35,color: Colors.red,decoration: TextDecoration.underline,fontWeight: FontWeight.bold),
+      );
+  var image = Image.network(
+    'https://developer.android.com/static/images/brand/Android_Robot.png?hl=zh-tw',
+    width: 300,
+    height: 100,
+  );
+  var appBody = Center(
+    child: Column(
+      children: <Widget>[
+        image,
+        hiFlutter,
+      ],
+    ),
+  );
+
+  var appBar = AppBar(
+    title: appTitle,
+    centerTitle: true,
+    backgroundColor: Colors.blue.shade900,
+  );
+  var app = MaterialApp(
+    title: '我的第一個flutter App',
+    home: Scaffold(
+      appBar: appBar,
+      body: appBody,
+      backgroundColor: Colors.yellow,
+    ),
+  );
+  runApp(app);
+  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
