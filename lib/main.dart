@@ -3,21 +3,24 @@ import 'package:flutter/material.dart';
 void main() {
   var appTitle = const Text('我的第一個flutter App'),
       hiFlutter = const Text(
-        'Hi,Flutter.\n今天是20220926',
-        style: TextStyle(fontSize: 35,color: Colors.red,decoration: TextDecoration.underline,fontWeight: FontWeight.bold),
+        'Hi,Flutter.\n今天是20220928',
+        style: TextStyle(
+            fontSize: 35,
+            color: Colors.red,
+            decoration: TextDecoration.underline,
+            fontWeight: FontWeight.bold),
       );
   var image = Image.network(
-    'https://developer.android.com/static/images/brand/Android_Robot.png?hl=zh-tw',
-    width: 300,
-    height: 100,
+    'https://truth.bahamut.com.tw/s01/202203/332a033ace292f586d829746954de29f.JPG',
+    width: 700,
+    height: 393,
   );
-  var appBody = Center(
-    child: Column(
-      children: <Widget>[
-        image,
-        hiFlutter,
-      ],
-    ),
+  var appBody =  Container(
+    alignment: Alignment.topCenter,
+    margin: const EdgeInsets.all(50),
+    padding: const EdgeInsets.all(50),
+    color: Colors.white,
+    child: hiFlutter,
   );
 
   var appBar = AppBar(
