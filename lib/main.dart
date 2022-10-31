@@ -1,4 +1,6 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
+import 'package:myflutter/app_body.dart';
 
 void main() {
   var appTitle = const Text('我的第一個flutter App'),
@@ -15,12 +17,49 @@ void main() {
     width: 700,
     height: 393,
   );
+
   var appBody =  Container(
     alignment: Alignment.topCenter,
     margin: const EdgeInsets.all(50),
     padding: const EdgeInsets.all(50),
     color: Colors.white,
-    child: hiFlutter,
+    child: GridView.count(
+      primary: false,
+      padding: const EdgeInsets.all(20),
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      crossAxisCount: 2,
+      children: <Widget>[
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: Colors.teal[100],
+          child: const Text("He'd have you all unravel at the"),
+        ),
+       image,
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: Colors.teal[300],
+          child: const Text('Sound of screams but the'),
+        ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: Colors.teal[400],
+          child: const Text('Who scream'),
+        ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: Colors.teal[500],
+          child: const Text('Revolution is coming...'),
+        ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          color: Colors.teal[600],
+          child: const Text('Revolution, they...'),
+        ),
+      ],
+    )
+
+
   );
 
   var appBar = AppBar(
