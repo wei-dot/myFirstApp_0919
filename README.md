@@ -1,16 +1,9 @@
-# myflutter
+# Flutter 練習
 
-A new Flutter project.
+## 練習項目
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [x] 添加snackbar OK
+- [x] 添加popupmenu button OK
+- [x] 添加dropdownbutton OK
+- [x] 使用gridview OK
+- [x] 使用column row OK
