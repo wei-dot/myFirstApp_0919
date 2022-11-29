@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class AnimateWidget extends StatefulWidget {
   const AnimateWidget({super.key});
@@ -9,6 +10,8 @@ class AnimateWidget extends StatefulWidget {
 
 class _AnimateState extends State<AnimateWidget> {
   bool selected = false;
+  int value=30;
+
   @override
   void initState() {
     super.initState();
@@ -22,19 +25,43 @@ class _AnimateState extends State<AnimateWidget> {
         centerTitle: true,
         backgroundColor: Colors.blue.shade900,
       ),
-      body: Center(
-        child: AnimatedContainer(
-          duration: const Duration(seconds: 1),
-          width: selected ? 200.0 : 100.0,
-          height: selected ? 100.0 : 200.0,
-          color: selected ? Colors.red : Colors.blue,
-
-          child: const FlutterLogo(size: 75),
+      body: GestureDetector(
+        onTap: () {
+          setState(() {
+            selected = !selected;
+          });
+        },
+        child: Center(
+          child: SizedBox(
+            width: double.maxFinite,
+            height: double.maxFinite,
+            child: AnimatedAlign(
+              alignment: selected ? Alignment.topRight : Alignment.bottomLeft,
+              duration: const Duration(seconds: 1),
+              curve: Curves.fastOutSlowIn,
+              child: Transform.rotate(
+                angle: value * math.pi / 180,
+                child: const IconButton(
+                  icon: Icon(
+                    Icons.flight,
+                    size: 50.0,
+                    color: Colors.blue,
+                  ),
+                  onPressed: null,
+                ),
+              ),
+            ),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
+            if(selected){
+              value=210;
+            }else{
+              value=30;
+            }
             selected = !selected;
           });
         },

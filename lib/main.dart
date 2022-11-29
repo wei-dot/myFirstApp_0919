@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myflutter/animate.dart';
 import 'package:myflutter/animate1.dart';
 
 void main() {
@@ -6,7 +7,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     title: '我的第一個flutter App',
     // home: MyStatefulWidget(),
-    home: Animate1Widget(),
+    home: AnimateWidget(),
   );
 
   runApp(app);
