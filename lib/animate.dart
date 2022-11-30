@@ -10,7 +10,7 @@ class AnimateWidget extends StatefulWidget {
 
 class _AnimateState extends State<AnimateWidget> {
   bool selected = false;
-  int value=30;
+  int value=0;
 
   @override
   void initState() {
@@ -36,7 +36,7 @@ class _AnimateState extends State<AnimateWidget> {
             width: double.maxFinite,
             height: double.maxFinite,
             child: AnimatedAlign(
-              alignment: selected ? Alignment.topRight : Alignment.bottomLeft,
+              alignment: selected ? Alignment.topCenter : Alignment.bottomCenter,
               duration: const Duration(seconds: 1),
               curve: Curves.fastOutSlowIn,
               child: Transform.rotate(
@@ -58,9 +58,9 @@ class _AnimateState extends State<AnimateWidget> {
         onPressed: () {
           setState(() {
             if(selected){
-              value=210;
+              value=180;
             }else{
-              value=30;
+              value=0;
             }
             selected = !selected;
           });

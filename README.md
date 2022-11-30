@@ -8,3 +8,4 @@
 - [x] 使用gridview OK
 - [x] 使用column row OK
 - [x] 添加飛機小動畫(觸碰按鈕來回飛) OK
+- [x] listview練習 OK
